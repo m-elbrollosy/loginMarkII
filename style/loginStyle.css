@@ -72,7 +72,7 @@ transition: 0.8s;
 }
 
 .login-box .input-box input:focus , .login-box .input-box input:valid {
-background-color: rgba(255, 255, 255, 0.466);
+background-color: white;
 
 }
 .login-box .input-box input:focus ~ label, .login-box .input-box input:valid ~ label {
@@ -80,7 +80,7 @@ top: -0.9rem;
 transform: translateY(0);
 }
 .login-box .input-box i {
-    color: gray;
+    color: black;
 position: absolute;
 right: 0.3rem;
 top: 50%;
