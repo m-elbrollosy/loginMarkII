@@ -1,0 +1,145 @@
+html {
+    font-size: 32px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "msb";
+    src: url("./../webfonts/en/msb.ttf");
+}
+body {
+    font-family: "msb";
+    text-transform: capitalize;
+    background: url("./../imgs/batman-2.png");
+    background-size: cover;
+   
+}
+section {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+   color: white !important;
+}
+.login-box {
+ padding: 0.3rem 0.2rem 1rem;
+text-align: center;
+font-size: 0.7rem;
+height: fit-content;
+width: fit-content;
+width: 35%;
+border: 1px solid rgba(0, 0, 0, 0.555);
+/* background-color: rgba(255, 228, 196, 0.575); */
+backdrop-filter: blur(3px);
+border-radius: 1.2rem;
+display: flex;
+flex-direction: column;
+}
+.login-box > * {
+    margin: 0.4rem;
+}
+.login-box .input-box  {
+    position: relative;
+    margin: 0.7rem 0.3rem;
+    /* replace border-bottom with i at last of div and use ~ & transition to hide it*/
+    border-bottom: 0.1rem solid rgba(0, 255, 213, 0.74);
+}
+
+.login-box .input-box label {
+/* margin: 0.3rem; */
+color: white;
+position: absolute;
+left: 0.3rem;
+top: 50%;
+transform: translateY(-50%);
+transition: 0.8s;
+}
+
+.login-box .input-box input {
+    position: relative;
+    width: 100%;
+    font-size: 0.7rem;
+    /*padding right 0.7 size of icon + 0.3 right position & 0.1 additional*/
+    padding: 0.3rem 1.1rem 0.3rem 0.3rem;
+    background: none;
+    outline: none;
+    border: none;
+    border-radius: 0.2rem;
+    transition: 0.8s;
+}
+
+.login-box .input-box input:focus , .login-box .input-box input:valid {
+background-color: rgba(255, 255, 255, 0.466);
+
+}
+.login-box .input-box input:focus ~ label, .login-box .input-box input:valid ~ label {
+top: -0.9rem;
+transform: translateY(0);
+}
+.login-box .input-box i {
+    color: gray;
+position: absolute;
+right: 0.3rem;
+top: 50%;
+transform: translateY(-50%);
+}
+.login-box .remember-forgot {
+   display: flex;
+   justify-content: space-between;
+}
+
+.login-box h2 {
+    color: white;
+margin: 0.8rem;
+text-align: center;
+}
+.login-box label {
+cursor: text;
+}
+.remember-forgot input[type="checkbox"] {
+    cursor: pointer;
+}
+.remember-forgot a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.login-box input[type="submit"] {
+    width: fit-content;
+    font-weight: 600;
+    margin: 0.5rem auto;
+    padding: 0.3rem 0.4rem;
+    font-size: 0.8rem;
+   border: none;
+   background-color: rgb(0, 136, 255);
+   border-radius: 20px;
+}
+.login-box input[type="submit"]:hover {
+    color: white;
+   /* background-color: white; */
+cursor: pointer;
+}
+.login-box p a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+                /* media screen for mobiles */
+@media screen and (max-width: 480px) {
+    .login-box {
+        text-align: center;
+        /* width: 85%; */
+        /* width: fit-content; for all  *** see it */
+        }
+}
+
+
+/* @media screen and (min-width: 777px) and (max-width: 1024px)  { */
+@media screen and (min-width: 481px) and (max-width: 1024px)  {
+    .login-box {
+        /* width: 60%; */
+        }
+}
